@@ -1,0 +1,52 @@
+html {
+    height: 100%; 
+}
+
+body {
+    background: radial-gradient(circle at 50% 5%, white, rgb(151, 147, 147));
+}
+
+div {
+    
+    /*border: 1px solid black;*/
+    padding: 3%;
+    
+}
+
+.banner {
+   margin-bottom: 1%;
+}
+
+.sidebar {
+    background-color: rgb(187, 180, 180);
+    width: 22%;
+    float: left;
+    
+}
+
+.content {
+    background: lightyellow;
+    border: 1px solid black;
+    /*float: left;*/
+    overflow: hidden;
+}
+
+
+.main {
+    background-color: rgb(161, 143, 143);
+    /*margin-left: 29%;*/
+    width: 50%;
+    float: left;
+}
+
+.footer {
+    opacity: 70%;
+    font-size: 2em;
+    clear: left;
+}
+
+/*
+.clearfix{
+    clear: both;
+}
+*/

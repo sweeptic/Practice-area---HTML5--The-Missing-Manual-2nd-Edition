@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/script/storing_objects.js"></script>
+    <link rel="stylesheet" href="/css/style_css_control.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <fieldset>
+        <legend>LOCAL STORAGE</legend>
+        <br>
+        <label for="">Key:</label>
+        <input type="text" name="" id="key">
+        <br><br>
+        <label for="">Value:</label>
+        <input type="text" name="" id="item">
+        <br> <br>
+        <input onclick="addValue()" type="button" value="Add">
+    </fieldset>
+
+    <div id="updateMessage">
+
+
+    </div>
+    <br>
+
+    <input type="file" name="" id="fileInput" onchange="processFiles(this.files)">
+
+    <button onclick="showFileInput()">Analyze a File</button>
+
+    <div id="dropBox">
+        <div>
+            Drop your image here...
+        </div>
+    </div>
+
+
+    <div id="fileOutput">
+
+
+    </div>
+
+
+</body>
+
+</html>

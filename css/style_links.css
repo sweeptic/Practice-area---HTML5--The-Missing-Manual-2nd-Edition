@@ -1,0 +1,37 @@
+
+
+html {
+    background: radial-gradient(circle at 50% 5%, rgb(182, 177, 177), rgb(151, 147, 147));
+    font-size: 1.2rem;
+}
+
+a {
+    color: #207EBF;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #F60;
+}
+
+a:hover {
+    color: #FFF;
+    background-color: #6E97BF;
+    border-bottom-color: #6E97BF;
+}
+
+a[href^="mailto:"] {
+    color: #666666;
+    border: none;
+    background: url(/images/email.gif) no-repeat left center;
+    padding-left: 20px;
+    margin: 30px;
+}
+
+.resources a[href$=".zip"],  a[href$=".doc"],  a[href$=".pdf"]{
+    background: url(/images/globe.png) no-repeat right;
+    padding-right: 25px;
+}
+
+.resources a:hover {
+    color: #000;
+    background-color: rgba(255,255,255,.8);
+    }

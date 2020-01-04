@@ -1,0 +1,45 @@
+
+/*
+.button {
+    border-radius: 15px;
+    background-color: grey;
+    margin: 30px;
+    padding: 10px;
+    width: 100px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s;
+    text-align: center;
+}
+
+.button:hover{
+    background-color: yellow;
+    color: red;
+
+}
+*/
+.first img{
+    width: 40%;
+    /*position: absolute;*/
+    transition: opacity 1s ease-out 0.4s;
+}
+
+.solid {
+    opacity: 1;
+}
+
+.transparent {
+    opacity: 0;
+}
+
+.ufo .rotatedElement:hover {
+transform: scale(2.2) rotate(10deg);
+  
+}
+
+
+.ufo .rotatedElement {
+    transition: all 1s;
+    background: white;
+}
+

@@ -1,0 +1,102 @@
+header {
+    /*background-color: lightblue;*/
+    text-align: center;
+    /*margin: 20px;*/
+    margin-bottom: 20px;
+    padding: 10px;
+    /*border: thin solid;*/
+}
+
+header h1 {
+    margin: 10px;
+    /*border: thin solid grey;*/
+    font-size: xx-large;
+}
+
+header .Teaser {
+    font-weight: bold;
+}
+
+header .Byline {
+    font-style: italic;
+    font-size: small;
+    margin: 0px;
+}
+
+h2 {
+    /*background-color: silver;*/
+    margin-bottom: 0px;
+}
+
+.Content p {
+    /*background-color: gold;*/
+    margin: 0px;
+}
+
+.page {
+    /*background-color: antiquewhite;*/
+    padding: 10px;
+}
+
+.PullQuote {
+    /*background-color: lightcoral;*/
+    max-width: 280px;
+    float: right;
+    border-top: solid;
+    border-bottom: solid;
+    font-size: 30pt;
+    font-style: italic;
+    line-height: 120%;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*padding-left: 100px;
+    padding-right: 100px;*/
+}
+
+.PullQuote img {
+    vertical-align: bottom;
+}
+
+.FloatFigure {
+    float: left;
+    /*background-color: lightgreen;*/
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+
+.FloatFigure figcaption {
+    max-width: 200px;
+    font-size: small;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+aside.NavSideBar {
+    display: none;
+    background-color: brown;
+    position: absolute;
+    top: 179px;
+    left: 0px;
+    width: 203px;
+    padding: 5px 15px 0px 15px;
+    min-height: 1500px;
+    font-size: small;
+}
+
+#FatFooter {
+    display: none;
+    background-color: gray;
+    position: fixed;
+    width: 100%;
+    height: 145px;
+    bottom: 0px;
+}
+
+.time, output{
+    font-size: 3em;
+    padding: 20px;
+}

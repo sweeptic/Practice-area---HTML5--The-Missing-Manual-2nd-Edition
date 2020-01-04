@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-image: url(/images/simple_blue_background-wallpaper-1680x1050.jpg)
+}
+
+.content {
+    width: 80%;
+    background-color: lightblue;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+p{
+    color: blue;
+    padding-left: 25px;
+    border-left: solid 25px white;
+    padding-top:15px;
+
+}
+
+
+
+h1 {
+    padding-bottom: 20px;
+}

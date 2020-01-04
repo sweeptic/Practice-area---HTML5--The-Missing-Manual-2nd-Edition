@@ -1,0 +1,61 @@
+
+img {
+    width: 200px;
+}
+
+.hat {
+    position: relative;
+    border: 1px solid black;
+    width: 200px;
+    top: 100px;
+ 
+}
+
+.hat figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    opacity: 0;
+    transition: opacity .5s ease-in;
+}
+
+.hat:hover figcaption {
+    opacity: 1;
+}
+
+h1 {
+    position: relative;
+    border: 1px dashed black;
+    margin-left: 40px;
+    top: 200px;
+    
+}
+
+h1 .date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: .5em;
+    background-color: yellow;
+    padding: 2px 7px 0 7px;
+}
+
+.img img {
+    width: 80px;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    z-index: -1;
+}
+
+.banner {
+    width: 100%;
+    height: 110px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+

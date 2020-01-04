@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(241, 201, 201);
+}
+
+
+
+.sidebar1 {
+    float: left;
+    background-color: rgb(189, 180, 180);
+    width: 20%;
+    padding: 0 20px 0 10px;
+}
+
+.main {
+    float: left;
+    width: 60%;
+    background-color: rgb(240, 223, 223);
+    padding: 0 20px 0 20px;
+    border-left: dashed 1px rgb(153, 153, 153);
+    border-right: dashed 1px rgb(153, 153, 153);
+}
+
+.sidebar2 {
+    float: right;
+    width: 20%;
+    padding: 0 10px 0 20px;
+}
+
+footer {
+    background-color: rgb(68, 64, 64);
+    clear: both;
+}
+
+
+header {
+    background-color: rgba(0, 0, 0, 0.158);
+    opacity: 90%;
+}
+
+
+nav ul, header h1, footer p, .contentWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+  

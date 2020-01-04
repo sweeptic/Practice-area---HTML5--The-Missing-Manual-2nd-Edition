@@ -1,0 +1,63 @@
+
+
+*{
+    
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    
+}
+
+header {
+    background-color: black;
+    opacity: 70;
+    color: white;
+    font-size: 3em;
+}
+
+.left{
+    padding: 2%;
+
+    background-color:thistle;
+   float: left;
+   width: 20%;
+   /*visibility: hidden;*/
+   /*display: none;*/
+   opacity: 1;
+}
+
+.right {
+    padding: 2%;
+    float: right;
+    background-color: wheat;
+    width: 20%;
+}
+
+.content {
+    padding: 2%;
+    background-color: yellowgreen;
+    width: 60%;
+    margin: 0 auto;
+    opacity: 80%;
+}
+
+h1 {
+    position: relative;
+    border-bottom: 1px dashed black;
+}
+
+img {
+    position: absolute;
+    width: 20%;
+    opacity: 80%;
+    right: -35px;
+    top: -35px;
+    z-index: -1;
+}
+
+
+.hat {
+    position:absolute;
+    left: 0;
+    top: 0;
+}

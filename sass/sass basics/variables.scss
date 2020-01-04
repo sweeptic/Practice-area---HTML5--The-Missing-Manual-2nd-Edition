@@ -1,0 +1,89 @@
+/* corporate color palette */
+$primary-dark: #06888A;
+$primary-light: #FFEED5;
+$primary-mid: #DC664A;
+$secondary-dark: #5A3928;
+$secondary-light: #FDC149;
+
+/* functional variables */
+$page-background: $primary-light;
+$headline-color: $primary-dark;
+$text-color: $primary-dark;
+$border-light: $secondary-light;
+$border-dark: $primary-dark;
+
+/*  fonts    */
+$headline-font: 'Varela Round',
+Helvetica,
+Arial,
+sans-serif;
+$body-font: 'Palatino Linotype',
+Baskerville,
+serif;
+
+/*  box styles    */
+$border-radius: 6px;
+
+/* calculated values */
+
+$margin-top: 20px;
+$margin-bottom: $margin-top / 2;
+
+.main {
+    &-title {
+        background-color: $primary-dark;
+    }
+
+    &-content {
+        background-color: $secondary-dark;
+    }
+}
+
+.button {
+    &:link {
+        background-color: $primary-dark;
+    }
+
+    &:visited {
+        background-color: $primary-dark;
+    }
+
+    &:hover {
+        background-color: $primary-dark;
+    }
+
+    &:active {
+        background-color: $primary-dark;
+    }
+}
+
+
+
+%btn {
+    display: inline-block;
+    padding: 1em;
+    border-radius: 3px;
+}
+
+.btn-order {
+    @extend %btn;
+    background-color: green;
+    color: white;
+}
+
+.btn-delete {
+    @extend %btn;
+    background-color: red;
+    color: white;
+}
+
+.btn-cancel {
+    @extend %btn;
+    background-color: #888;
+    color: black;
+}
+
+
+@mixin flex {
+    display: flex;
+}

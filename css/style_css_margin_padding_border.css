@@ -1,0 +1,27 @@
+
+body {
+    padding: 0;
+    margin: 0;
+
+}
+
+.main {
+    margin: 20px;
+    padding: 20px;
+    height: 600px
+}
+
+body {
+    /*background: radial-gradient(circle, white, lightblue) repeat-x;*/
+/*background: radial-gradient(circle, yellow 10%, green 70%, blue, white,
+black) repeat-x;*/
+
+background: radial-gradient(circle at 50% 5%, white, rgb(151, 147, 147));
+
+/*background: repeating-radial-gradient(circle, yellow, green) ;*/
+
+/*background: repeating-radial-gradient(circle, yellow, green 10%);*/
+
+/*background: repeating-linear-gradient(to top, red, orange, white, yellow,
+red 30px);*/
+}

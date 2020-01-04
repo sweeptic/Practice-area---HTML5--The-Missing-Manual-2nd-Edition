@@ -1,0 +1,113 @@
+html {
+    background-image: url(/images/simple_blue_background-wallpaper-1680x1050.jpg);
+    background-color: black;
+    padding-top: 50px;
+}
+
+body {
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+}
+
+h1 {
+    font-family: sans-serif;
+    color: cadetblue;
+}
+
+.special {
+    background-color: yellow;
+    font-family: 'Courier New', Courier, monospace
+}
+
+.fonttype {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red
+}
+
+.btn {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    font-size: 1.5em;
+    margin: 5px;
+    padding: 2px 20px 2px 20px;
+    ;
+}
+
+.add {
+    background-color: green;
+}
+
+.edit {
+    background-color: grey;
+}
+
+.delete {
+    background-color: red;
+}
+
+#banner {
+    background-color: lightsalmon;
+    margin: 0 auto;
+    height: 300px;
+    width: 720px;
+    border-radius: 10px;
+}
+
+#banner img {
+    padding: 10px;
+}
+
+h1, h2 {
+    background-color: lightskyblue;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+p {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+p::first-letter {
+    font-size: 3em;
+}
+
+.tip:before {
+    content: "HOT TIP! "
+}
+
+;
+p::selection {
+    color: red;
+    background-color: pink;
+}
+
+img[title="ufos"]{
+    border-radius: 10px;
+}
+
+input[type= "button"]{
+    width: 50%;
+}
+
+#signupForm{
+    display: none;
+}
+
+#signupForm:target {
+    display:  block;
+}
+
+img[title="ufos"]{
+    width: 20%;
+}

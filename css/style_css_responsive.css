@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    background-color: lightgrey;
+}
+/*
+.content {
+    box-sizing: border-box;
+    max-width: 960px;
+    width: 100%;
+
+    font-size: 2rem;
+    border: 1px solid black;
+    margin: 1% auto;
+    background: radial-gradient(circle at 50% 5%, white, rgb(151, 147, 147));
+    border-radius: 5px;
+}
+*/
+
+.columns {
+ 
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+.columns:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.nav {
+    float: left;
+    width: 18.75%;
+}
+
+
+.one-third {
+    border: 1px solid black;
+    padding: 4%;
+    float: left;
+    width: 30%;
+    margin-right: 2%;
+}
+
+.two-thirds {
+    border: 1px solid black;
+    float: left;
+    padding: 3%;
+    width: 49.25%;
+}
+
+header {
+    background-image: url(/images/Web-banner-960-wide.jpg);
+    background-repeat: no-repeat;
+    max-width: 960px;
+    width: auto;
+    height: 120px;
+    margin: 1% auto;
+  
+}
+
+
+
+.imgSmall {
+    max-width: 50%;
+    padding: 5%;
+    border: 1px solid black;
+}
+
+.imgLeft { 
+    float: left;
+ 
+}
+  
+
+/* medium display only */
+@media (min-width: 481px) and (max-width:768px) {
+    body {
+        background-color: mediumpurple;    
+    }
+
+    .content {
+        /*idth: 100%;*/
+      
+    }
+
+    .one-third {
+        float: none;
+        width: 100%;
+    }
+
+    .two-thirds {
+        float: none;
+        width: 100%;
+    }
+
+    .columns {
+        max-width: 768px;
+        width: 100%;      
+    }
+
+    .nav {
+        display: none;
+    }
+  
+  }
+
+  /* small display only */
+  @media (max-width:480px) {
+    body {
+      background-color: mediumseagreen;
+    }
+  }
+
+
+/*
+three different breakpoints—one
+- for smartphones, 
+- one for tablets, 
+- and one for desktop monitors
+*/

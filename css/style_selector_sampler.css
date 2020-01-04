@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-image: url(/images/simple_gray_background-wallpaper-1680x1050.jpg)
+}
+
+article {
+    background-color: rgb(145, 145, 145);
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 0 0 10px 10px;
+    height: auto;
+    padding: 10px 20px 10px 20px;
+    max-width: 760px;
+}
+
+#logo {
+    font-size: 3em;
+    color: rgba(15, 15, 15, 0.685);
+    font-style: italic;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.144);
+    margin-bottom: 30px;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+}
+
+h1, h2, h3 {
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid lightgrey;
+    padding-top: 10px;
+    padding-bottom: 4px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h1+p{
+    font-size: 1.2em;
+    line-height: 140%;
+    background-color: yellow;
+}
+
+li {
+    margin-left: 50px;
+}
+
+p {
+    color: rgba(107, 8, 8, 0.733);
+    font-size: 1em;
+    padding: 10px;
+    margin: 10px;
+}
+
+footer {
+    background-color: rgb(44, 40, 40);
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto;
+
+}
+
+.note {
+    color: black;
+    border: 2px solid white;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    padding: 20px;
+    background-color: lightgreen;
+}
+
+.note strong{
+    color: blueviolet;
+}

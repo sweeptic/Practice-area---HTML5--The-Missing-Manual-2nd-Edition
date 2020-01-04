@@ -1,0 +1,140 @@
+@font-face {
+    font-family: "Abril_Fatface";
+    src: url(/fonts/Abril_Fatface/AbrilFatface-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Alata";
+    src: url(/fonts/Alata/Alata-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Alatsi";
+    src: url(/fonts/Alatsi/Alatsi-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Archivo_Narrow";
+    src: url(/fonts/Archivo_Narrow/ArchivoNarrow-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Arvo";
+    src: url(/fonts/Arvo/Arvo-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Asap";
+    src: url(/fonts/Asap/Asap-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Barlow_Semi_Condensed";
+    src: url(/fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Calistoga";
+    src: url(/fonts/Calistoga/Calistoga-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Dancing_Script";
+    src: url(/fonts/Dancing_Script/DancingScript-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Exo_2";
+    src: url(/fonts/Exo_2/Exo2-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Merriweather";
+    src: url(/fonts/Merriweather/Merriweather-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Merriweather_sans";
+    src: url(/fonts/Merriweather_Sans/MerriweatherSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+body {
+    /*line-height: 1.5;*/
+}
+
+html {
+
+    /*font-size: 2em;*/
+    /*font-style: oblique;*/
+}
+
+p {
+    /*text-indent: 50%;*/
+    font-size: 2rem;
+    color: hsl(241, 97%, 14%);
+    font-variant: small-caps;
+    text-transform: lowercase;
+    /*line-height: 140%;*/
+    /*line-height: 1;*/
+    text-align: left;
+    margin-bottom: 0;
+}
+
+p::first-letter {
+    font-weight: bold;
+    color: red;
+}
+
+h1 {
+    font-size: 6em;
+}
+
+h1 strong {
+    font-size: 2rem;
+    color: red;
+    /*letter-spacing: 4px;*/
+}
+
+h2 {
+    font-size: 2em;
+    letter-spacing: 5px;
+    word-spacing: 3px;
+    /*line-height: 125%;*/
+}
+
+/*
+h2::first-line{
+    text-transform: uppercase;
+    color: blue;
+}
+*/
+ul, ol{
+    font-size: 2rem;
+    list-style-type: square;
+    list-style-position: inside;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+ul li{
+    list-style-type: none;
+}
+ul li::before {
+    content: counter(item, disc) " ";
+    color: red;
+}
+
+body {
+    font-family: "Montserrat";
+    margin: 100px;
+    /*font-size: 200%;*/
+    /*background: rgb(170,240,0);*/
+    background: rgba(170, 240, 0, 0.5);
+    opacity: 0.5;
+
+}

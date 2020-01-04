@@ -1,0 +1,42 @@
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes backgroundglow {
+    from {
+        background-color: greenyellow;
+    }
+    to {
+        background-color: lightgrey;
+    }
+}
+
+@keyframes growAndGlow {
+    from {
+        background-color: lightgrey;
+        animation-timing-function: cubic-bezier(1, .03, 1, .115);
+    }
+    50% {
+        transform: scale(1.5);
+        background-color: blue;
+        animation-timing-function: linear;
+    }
+    to {
+        transform: scale(3);
+        background-color: red;
+    }
+}
+
+body {
+    animation-name: growAndGlow;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+

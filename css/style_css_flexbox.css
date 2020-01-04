@@ -1,0 +1,132 @@
+.a {
+    background-color: lightblue;
+}
+
+.b {
+    background-color: lightcoral;
+}
+
+.c {
+    background-color: lightgoldenrodyellow;
+}
+
+.d {
+    background-color: lightseagreen;
+}
+
+.e {
+    background-color: lightskyblue;
+}
+
+.f {
+    background-color: lightslategray
+}
+
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 3%;
+    height: 300px;
+    padding: 1%;
+    background-color: lightslategray;
+    /*justify-content: space-around;*/
+    /*align-items: space-between;*/
+    /*align-content: flex-start;*/
+}
+
+.style {
+    padding: 10px;
+    width: 150px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.container .flex1 {
+    order: 1;
+    align-self: flex-end;
+    flex: 2 0;
+}
+
+.container .flex2 {
+    order: 2;
+    align-self: flex-start;
+    flex: 1 0;
+}
+
+.container .flex3 {
+    order: 3;
+    align-self: center;
+    flex: 1 0 300px;
+}
+
+.banner {
+    display: flex;
+    background-color: black;
+    align-items: flex-end;
+    flex-direction: row;
+    /*justify-content: flex-start;*/
+    /*flex-wrap: wrap;*/
+}
+
+.logo {
+    /*background-color: lime;*/
+    margin-right: auto;
+    font-size: 2.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: white;
+}
+
+.banner a {
+    background-color: lightgreen;
+    margin-left: 10px;
+    padding: 10px;
+    width: 80px;
+    border-radius: 10px 10px 0 0;
+    text-decoration: none;
+    background-color: cadetblue;
+    color: white;
+}
+
+.banner a:last-of-type {
+    margin-right: 10px;
+}
+
+.containerB {
+    background-color: lightseagreen;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.containerB .flex1 {
+    flex: 1;
+}
+
+.containerB .flex2 {
+    flex: 2;
+}
+
+.containerB .flex3 {
+    flex: 1;
+}
+
+
+.containerC {
+    background-color: lightslategray;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.containerC .flex1 {
+    flex: 1 1 400px;
+}
+
+.containerC .flex2 {
+    flex: 2 1 400px;
+}
+
+.containerC .flex3 {
+    flex: 1 1 400px;
+}

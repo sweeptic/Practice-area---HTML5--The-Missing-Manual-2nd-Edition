@@ -1,0 +1,27 @@
+
+
+
+
+.main {
+    margin: 50px;
+ 
+    /*width: 640px;
+    height: 480px;*/
+;
+
+    background-image:   
+                        url(/images/bg_body.png),
+                        url(/images/ufo_small.JPG),                      
+                        url(/images/quote_end.png);
+
+    background-repeat: no-repeat, no-repeat, repeat-y;
+
+    background-position: center top, center bottom, center top;
+   
+
+
+    /*background-blend-mode: screen;*/
+   
+
+}
+

@@ -1,0 +1,40 @@
+html{
+    height: 100%;;
+}
+
+body {
+    background: radial-gradient(circle at 50% 5%, rgb(182, 177, 177), rgb(151, 147, 147));
+}
+
+td, th {
+    padding: 10px;
+}
+
+table {
+    margin: 50px;
+    text-align: right;
+    border-spacing: 10px;
+    /*border-collapse: collapse;*/
+    border: 1px  dashed black;
+    border-radius: 5px;
+    empty-cells: hide;
+}
+
+td {
+    border: 1px  dashed black;
+    border-radius: 5px;
+
+    
+}
+
+th { background-color: grey;}
+
+tr:nth-of-type(odd) { background-color: salmon;}
+tr:nth-of-type(even) { background-color: rgb(33, 170, 68);}
+
+.power {
+    width: 240px;
+    background-color: red;
+}
+
+

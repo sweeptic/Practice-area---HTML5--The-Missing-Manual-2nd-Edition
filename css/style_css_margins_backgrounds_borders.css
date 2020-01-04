@@ -1,0 +1,58 @@
+
+
+html{
+    background: lightyellow;
+}
+
+body {
+    background: radial-gradient(circle at 50% 5%, white, rgb(151, 147, 147));
+    border: 3px solid black;
+    max-width: 760px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.596) 
+}
+
+
+h1 {
+    font-size: 2.75em;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: aquamarine;
+    /*padding: 5px 15px 2px 15px;*/
+    margin: 0 -15px 20px -15px;
+}
+
+h2 {
+    color: red;
+    border-top: 2px dotted white;
+    border-bottom: 2px dotted white;
+    margin: 15px 0 5px 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 30%;
+    float: right;
+    margin:  10px;
+    background-color: bisque;
+    padding: 10px 20px;
+    border: 3px dotted green;
+    border-top: 20px solid green;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5)
+
+}
+
+.sidebar h2 {
+    border: none;
+    margin-top: 0;
+    padding: 0;
+
+}

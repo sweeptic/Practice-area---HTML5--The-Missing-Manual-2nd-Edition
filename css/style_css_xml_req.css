@@ -1,0 +1,15 @@
+
+
+.content {
+    margin: 40px;
+    border: 1px solid black;
+    padding: 40px;
+    background-color: burlywood;
+}
+
+.answer {
+    height: 60px;
+    border: 1px solid black;
+    color: red;
+
+}

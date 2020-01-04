@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+body {
+    background-color: rgba(50, 205, 50, 0.473);
+    /*opacity: 0.5;*/
+    font-family: "Montserrat";
+}
+
+h1 {
+    font-size: 4em;
+}
+
+p {
+    font-size: 2em;
+}
+
+.decoratedBox {
+    margin: 50px;
+    padding: 20px;
+    background-image: 
+    url(/images/ufo_small.JPG),  
+    url(/images/quote_start.png),
+    url(/images/site_logo.png);
+    background-position: left top, left top,  right bottom;
+    background-repeat: no-repeat, repeat-x,  no-repeat;
+}

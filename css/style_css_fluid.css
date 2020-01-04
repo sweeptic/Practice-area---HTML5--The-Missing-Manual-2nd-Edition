@@ -1,0 +1,43 @@
+body {
+background: radial-gradient(circle at 50% 5%, white, rgb(151, 147, 147));
+font-size: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+div {
+    /*border: 5px solid black;*/
+    /*padding: 20px;*/
+ 
+}
+
+.leftColumn {
+    width: 47%;
+    float: left;
+    margin-left: 1.66%;
+    margin-right: 1.66%;
+    /*box-sizing: border-box;*/
+}
+
+.rightColumn {
+    width: 47%;
+    margin-right: 1.66%;
+    float:left;
+    box-sizing: border-box;
+}
+
+.leftColumnContent {
+    border: 0.07em solid black;
+    margin: 0.3em;
+    padding: 0.2em;
+}
+
+img {
+    max-width: 90%;
+}
+
+p {
+    font-size:  0.4em;
+}

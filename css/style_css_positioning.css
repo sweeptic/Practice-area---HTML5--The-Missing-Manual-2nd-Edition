@@ -1,0 +1,60 @@
+
+
+.banner {
+
+    background-image:
+    linear-gradient(cyan,transparent),
+    linear-gradient(225deg, magenta, transparent),
+    linear-gradient(45deg, yellow, transparent);
+    height: 10%;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 5%;
+    /*width: 760px;*/
+    border: 1px solid black;
+    font-size: 3em;
+    opacity: 70%;
+    
+}
+
+.rel {
+    border: 1px solid black;;
+}
+
+h1 {
+    border: 1px solid black;
+    width: 500px;
+}
+
+img {
+    position: relative;
+    left: 55px;
+    top: 10px;
+}
+
+.inner {
+    position: relative;
+    background-color: red;
+    height: 20px;
+    width: 20px;
+    left: 20px;
+    top: 30px;
+}
+
+.outer {
+    top: 100px;
+
+    background-color: cadetblue;
+    /*position: relative;*/
+}
+
+.rel{
+    background-color: crimson;
+    position: absolute;
+    top: -35px;
+    right: -35px;
+    opacity: 80%;
+}
+
+

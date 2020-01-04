@@ -1,0 +1,18 @@
+h1 {
+    background-color: lightblue;
+    overflow: hidden;
+}
+
+.main {
+   clear: none;
+}
+
+.sidebar {
+    clear: right;
+    padding: 20px;
+    margin-right: 50px;
+    overflow: hidden;
+    float: right;
+    background: yellow;
+    max-width: 300px;
+}

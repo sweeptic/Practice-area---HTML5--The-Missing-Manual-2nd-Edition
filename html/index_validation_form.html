@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/css_validation_form.css">
+    <script src="/script/script_validation_form.js"></script>
+
+</head>
+
+<body>
+
+    <form id="zooKeeperForm" action="processAppliction.cgi" onsubmit="return validateForm()" spellcheck="false"
+        autocomplete="off">
+        <h1>Zoo Keeper Application Form</h1>
+        <p><i>Please complete the form. Mandatory fields are marked
+                with a <i><em>*</em></i>
+            </i></p>
+
+        <fieldset>
+            <legend>Contact Details</legend>
+            <label for="name">Name <em>*</em></label>
+            <input id="name" placeholder="Jon Smith" autofocus required><br>
+
+            <label for="telephone">Telephone</label>
+            <input id="telephone" placeholder="(+36)-xx-xxx-xxxx"><br>
+
+            <label for="email">Email <em>*</em></label>
+            <input id="email" type=multiple><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="age"><em>*</em> Age</label>
+            <input type="number" min="0" max="120" step="1"> <br>
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="gender">Gender</option>
+            </select> <br>
+            <label for="comments">When did you first know you to be a zoo-keeper?</label>
+            <textarea id="comments" oninput="validateComments(this)"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Pick Your Favourite Animals</legend>
+            <label for="zebra"><input type="checkbox" id="zebra">Zebra</label>
+            <label for="cat"><input type="checkbox" id="cat">Cat</label>
+
+            <label for="anaconda"><input type="checkbox" id="anaconda">Anaconda</label>
+            <label for="human"><input type="checkbox" id="human">Human</label>
+            <label for="elephant"><input type="checkbox" id="elephant">Elephant</label>
+            <label for="wildebeest"><input type="checkbox" id="wildebeest">Wildebeest</label>
+            <label for="pigeon><input type=" checkbox" id="pigeon">Pigeon</label>
+            <label for="crab"><input type="checkbox" id="crab">Crab</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>What's Your Favorite Animal?</legend>
+            <input id="favouriteAnimal" list="animalChoices">
+            <datalist id="animalChoices">
+                <option value="a" label="alpaca">
+                <option value="b" label="alpaca">
+                <option value="c" label="alpaca">
+                <option value="d" label="alpaca">
+            </datalist>
+        </fieldset>
+
+
+        <fieldset>
+            <label for="promo">Promo Code</label>
+            <input id="promocode" placeholder="ABC-123" type="text"
+                title="Your promotion code is three uppercase letters, a dash, then three numbers"
+                pattern="[A-Z]{3}-[0-9]{3}"> <br>
+            <progress value="50" max="200">25%</progress> <br>
+            <meter min="7" max="70" value="50"> 28 pounds</meter>
+
+        </fieldset>
+
+        <p><input type="submit" value="Submit Application"></p>
+        <p><input type="submit" value="Save For Later" formnovalidate></p>
+    </form>
+
+    <button onclick="startEdit()">Start Editing</button>
+    <button onclick="stopEdit()"> Stop Editing</button>
+
+    <div id="editableElement">this is text</div>
+
+
+
+
+</body>
+
+</html>

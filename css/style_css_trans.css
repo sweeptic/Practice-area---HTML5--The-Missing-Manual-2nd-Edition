@@ -1,0 +1,63 @@
+.a img {
+    /*margin: 150px;*/
+    border: 1px solid black;
+    transform: rotate(45deg);
+    opacity: 60%;
+    transition-duration: 2s;
+}
+
+.a img:hover {
+    transform: rotate(90deg);
+    /*transform: scale(2, 0.5);*/
+}
+
+.a {
+    background: url(/images/leaves.jpg);
+    font-size: 3em;
+}
+
+button {
+    margin: 10px;
+    width: 240px;
+    height: 100px;
+    border: 1px solid red;
+    border-radius: 10px;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.b button {
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(.20, .96, .74, .07);
+}
+
+.c button {
+    color: black;
+    background-color: #FF6603;
+    border: 5px solid #660034;
+    transition-property: color, background-color, border-color;
+    transition-duration: 1s, 1s, .5s;
+    transition-delay: 0, 0, 1s;
+}
+
+.c button:hover {
+    color: white;
+    background-color: #660034;
+    border-color: #FF6603;
+
+}
+
+.b button:hover {
+    color: red;
+    transform: skew(25deg, 10deg) scale(-1) translate(-1px, -2px);
+}
+
+.b button:active {
+    transform: translate(1px, 2px);
+}
+
+html {
+    background-color: cadetblue;
+    transition: background-color 4s;
+    transform: translateZ(0);
+}

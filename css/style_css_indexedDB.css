@@ -1,0 +1,15 @@
+.resultBox {
+    height: 100px;
+    border: 1px solid black;
+    margin-top: 40px;;
+}
+
+fieldset {
+    width: 40em;
+}
+
+label {
+    display: inline-block;
+    width: 20em;
+    margin: 10px;
+}

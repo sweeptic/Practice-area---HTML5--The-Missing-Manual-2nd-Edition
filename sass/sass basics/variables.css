@@ -1,0 +1,50 @@
+/* corporate color palette */
+/* functional variables */
+/*  fonts    */
+/*  box styles    */
+/* calculated values */
+.main-title {
+  background-color: #06888A;
+}
+
+.main-content {
+  background-color: #5A3928;
+}
+
+.button:link {
+  background-color: #06888A;
+}
+
+.button:visited {
+  background-color: #06888A;
+}
+
+.button:hover {
+  background-color: #06888A;
+}
+
+.button:active {
+  background-color: #06888A;
+}
+
+.btn-order, .btn-delete, .btn-cancel {
+  display: inline-block;
+  padding: 1em;
+  border-radius: 3px;
+}
+
+.btn-order {
+  background-color: green;
+  color: white;
+}
+
+.btn-delete {
+  background-color: red;
+  color: white;
+}
+
+.btn-cancel {
+  background-color: #888;
+  color: black;
+}
+/*# sourceMappingURL=variables.css.map */

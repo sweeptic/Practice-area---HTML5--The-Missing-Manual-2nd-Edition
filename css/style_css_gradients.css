@@ -1,0 +1,71 @@
+body div {
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    float: left;
+}
+
+.main1 {
+    background-image: linear-gradient(cyan, transparent), linear-gradient(225deg, magenta, transparent), linear-gradient(45deg, yellow, transparent);
+}
+
+.main2 {
+    background-image: repeating-linear-gradient(45deg, #900 20px, #FC0 30px, #900 40px);
+}
+
+.main3 {
+    background-image: repeating-linear-gradient(45deg, #900 0, #900 10px, #FC0 10px, #FC0 20px);
+}
+
+.main4 {
+    background-image: radial-gradient(red, blue);
+}
+
+.main5 {
+    background-image: radial-gradient(closest-side circle at 20% 40%, red, blue);
+}
+
+.main6 {
+    background-image: radial-gradient(closest-corner circle at 20% 40%, red,
+blue);
+}
+
+.main7 {
+    background-image: radial-gradient(farthest-side circle at 20% 40%, red,
+    blue);
+
+}
+.main8{
+    background-image: radial-gradient(farthest-corner circle at 20% 40%, red,
+    blue);
+}
+
+.main9{
+    background-image: radial-gradient(circle at 20% 40%, red 20%, orange 80%, yellow);
+}
+
+.main10{
+    background-image: repeating-radial-gradient(circle, red 20px, orange 30px,
+    yellow 40px, red 50px);
+}
+
+.main11{
+    
+}
+
+.main12{
+    
+}
+
+.main13{
+    
+}
+
+.main14{
+    
+}
+
+.main15{
+    
+}
