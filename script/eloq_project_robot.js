@@ -110,7 +110,7 @@ function findRoute(graph, from, to) {
             }
         }
     }
-}
+} 
 
 function goalOrientedRobot({ place, parcels }, route) {
     if (route.length == 0) {
