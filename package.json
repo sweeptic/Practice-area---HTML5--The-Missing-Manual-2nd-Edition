@@ -1,0 +1,23 @@
+{
+  "name": "html-lost-manual",
+  "version": "1.0.0",
+  "description": "lost manual",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sweeptic/practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sweeptic/practice/issues"
+  },
+  "homepage": "https://github.com/sweeptic/practice#readme",
+  "dependencies": {
+    "date-names": "^0.1.13",
+    "ordinal": "^1.0.3"
+  }
+}
