@@ -76,13 +76,23 @@ class Node {
 
   send(to, type, message, callback) {
     let toNode = this[$network].nodes[to]
-    if (!toNode || !this.neighbors.includes(to))
+    if (!toNode || !this.neighbors.includes(to)){ 
+      
       return callback(new Error(`${to} is not reachable from ${this.name}`))
+    }
     let handler = this[$network].types[type]
+    //  (nest, content, source, done) => {
+    //      console.log(`${nest.name} received note: ${content}`);
+    //      done();
+    //   }
     if (!handler)
       return callback(new Error("Unknown request type " + type))
     if (Math.random() > 0.03) setTimeout(() => {
       try {
+        //a handler megkapja a 4 parametert
+        //a handler torzse lefut: console.log(`${nes....
+        //a handler elinditja a done-t ami egy fuggveny parameter (error, response) => {...
+        //ez a függvény meghivja a callbacket: () => console.log("Note delivered."));
         handler(toNode, ser(message), this.name, (error, response) => {
           setTimeout(() => callback(error, ser(response)), 10)
         })
@@ -92,9 +102,9 @@ class Node {
     }, 10 + Math.floor(Math.random() * 10))
   }
 
-  readStorage(name, callback) {
-    let value = this[$storage][name]
-    setTimeout(() => callback(value && JSON.parse(value)), 20)
+  readStorage(name, callback_) {
+    let value = this[$storage][name]; // typeof value : string
+    setTimeout(() => callback_(value && JSON.parse(value)), 20)
   }
 
   writeStorage(name, value, callback) {
@@ -149,10 +159,7 @@ function availableNeighbors(nest) {
   });
 }
 
-/************ */
-
-
-/*
+/*Callbacks*********** */
 bigOak.readStorage(
   "food caches",
   caches => {
@@ -161,20 +168,29 @@ bigOak.readStorage(
   }
 );
 
-/
-
+// NOTE handler                                   DONE: callback function that it must call when it is done with the request.
 defineRequestType("note", (nest, content, source, done) => {
-    console.log(`${nest.name} received note: ${content}`);
-    done(); //callback
-  }
+  console.log(`${nest.name} received note: ${content}`);
+  done(); //callback
+}
 );
+//                                                            expects a function to call when a response comes in 
+//                                                            as its fourth and last argument.
+bigOak.send("Cow Pasture", "note", "Let's caw loudly at 7PM", () => console.log("Note delivered."));
 
 
-bigOak.send("Cow Pasture", "note", "Let's caw loudly at 7PM", () => console.log("Note delivered."));*/
 
+
+/*
+ readStorage(name, callback_) {
+    let value = this[$storage][name]; // typeof value : string
+    setTimeout(() => callback_(value && JSON.parse(value)), 20)
+  }
+  */
 function storage(nest, name) {
-  return new Promise(resolve => {
-    nest.readStorage(name, result => resolve(result));
+  return new Promise(resolve_ => {   //the constructor expects a function as argument,    
+    nest.readStorage(name, result => resolve_(result));//a (value && JSON.parse(value)) kifejezest adom at egyolyan nevtelen fuggvenynek
+                                                      //amibe. ez result bemeno parameteru fuggvenykent fog lefutni.
   });
 }
 

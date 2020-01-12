@@ -1,55 +1,40 @@
+
 /*
+let storage = Object.create(null)
 
-//promised value -> 15
-let fifteen = Promise.resolve(15);
+storage["food caches"] = '["cache in the oak", "cache in the meadow", "cache under the hedge"]'
+storage["cache in the oak"] = "A hollow above the third big branch from the bottom. Several pieces of bread and a pile of acorns."
 
-// then: ez a callback function
-fifteen.then(value => console.log('got  ${value}'));
-
-
-new Promise((_, reject) => reject(new Error("Fail")))
-    .then(value => console.log("Handler 1"))
-    .catch(reason => {
-        console.log("Caught failure " + reason);
-        return "nothing";
-    })
-    .then(value => console.log("Handler 2", value));
-// → Caught failure Error: Fail
-// → Handler 2 nothing
-
-
-
-Group.prototype[Symbol.iterator] = function* () {
-    for (let i = 0; i < this.members.length; i++) {
-        yield this.members[i];
-    }
-};
+console.log(typeof val);
 */
 
 /*
-let start = Date.now();
+let promise = new Promise(function (resolve, reject) {
+    //setTimeout(() => resolve("done"), 500);
+    setTimeout(() => reject(new Error("Whoops!")), 500);
+});
 
-setTimeout(() => {
-    console.log("Timeout ran at", Date.now() - start);
-}, 1);
+console.log(promise);
+//setTimeout(() => console.log(promise), 1000);
+//promise.then((val) => console.log(val),(val) => console.log(val) );
+promise.catch(err => console.log(err));
+//promise.then(() => console.log(promise));*/
 
-while (Date.now() < start + 50) { }
 
-console.log("Wasted time until", Date.now() - start);
-// → Wasted time until 50
-// → Timeout ran at 55
-*/
 
-Promise.resolve("Done").then(console.log);
-console.log("Me first!");
-console.log("Me second!");
-console.log("Me second!");
-console.log("Me second!");
-console.log("Me second!");
-console.log("Me second!");
-console.log("Me second!");
-console.log("Me second!");
-Promise.resolve("Done2").then(console.log);
-console.log("Me third!");
-console.log("Me third!");
-console.log("Me third!");
+
+ function readStorage(name, callback_) {
+    let value = '"abc"'; // typeof value : string
+    setTimeout(() => callback_(value && JSON.parse(value)), 20);//ez a kifejezes a nevtelen fuggveny bemeno parameter lesz
+  }
+  
+
+ function storage(nest, name) {
+    return new Promise(resolve_ => {   //the constructor expects a function as argument,   
+                    readStorage(name,       result => resolve_(result));//a promise bemenő paraméterét meghivjuk a readstorage visszateresi ertekevel
+      //            readStorage(firstCache, info     => console.log(info));
+    });
+  }
+  
+  storage("bigOak", "enemies")
+  .then(value => console.log("Got", value));
