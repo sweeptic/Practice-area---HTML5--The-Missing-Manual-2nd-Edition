@@ -76,8 +76,8 @@ class Node {
 
   send(to, type, message, callback) {
     let toNode = this[$network].nodes[to]
-    if (!toNode || !this.neighbors.includes(to)){ 
-      
+    if (!toNode || !this.neighbors.includes(to)) {
+
       return callback(new Error(`${to} is not reachable from ${this.name}`))
     }
     let handler = this[$network].types[type]
@@ -149,34 +149,24 @@ if (typeof window != "undefined") {
 }
 
 
-function availableNeighbors(nest) {
-  let requests = nest.neighbors.map(neighbor => {
-    return request(nest, neighbor, "ping")
-      .then(() => true, () => false);
-  });
-  return Promise.all(requests).then(result => {
-    return nest.neighbors.filter((_, i) => result[i]);
-  });
-}
-
 /*Callbacks*********** */
 bigOak.readStorage(
   "food caches",
   caches => {
     let firstCache = caches[0];
-    bigOak.readStorage(firstCache, info => console.log(info));
+    //  bigOak.readStorage(firstCache, info => console.log(info));
   }
 );
 
 // NOTE handler                                   DONE: callback function that it must call when it is done with the request.
 defineRequestType("note", (nest, content, source, done) => {
-  console.log(`${nest.name} received note: ${content}`);
+  // console.log(`${nest.name} received note: ${content}`);
   done(); //callback
 }
 );
 //                                                            expects a function to call when a response comes in 
 //                                                            as its fourth and last argument.
-bigOak.send("Cow Pasture", "note", "Let's caw loudly at 7PM", () => console.log("Note delivered."));
+//bigOak.send("Cow Pasture", "note", "Let's caw loudly at 7PM", () => console.log("Note delivered."));
 
 
 
@@ -190,10 +180,82 @@ bigOak.send("Cow Pasture", "note", "Let's caw loudly at 7PM", () => console.log(
 function storage(nest, name) {
   return new Promise(resolve_ => {   //the constructor expects a function as argument,    
     nest.readStorage(name, result => resolve_(result));//a (value && JSON.parse(value)) kifejezest adom at egyolyan nevtelen fuggvenynek
-                                                      //amibe. ez result bemeno parameteru fuggvenykent fog lefutni.
+    //amibe. ez result bemeno parameteru fuggvenykent fog lefutni.
   });
 }
 
 storage(bigOak, "enemies")
-  //resolve handler
-  .then(value => console.log("Got", value));
+//resolve handler
+//.then(value => console.log("Got", value));
+
+/*Failure*********** */
+
+
+function request(nest, target, type, content) {
+  return new Promise((resolve, reject) => {
+    let done = false;
+    function attempt(n) {
+      nest.send(target, type, content, (failed, value) => {
+        done = true;
+        if (failed) reject(failed);
+
+        else { resolve(value);/*console.log("value:" + value);*/ }
+      });
+      setTimeout(() => {
+        if (done) return;
+        else if (n < 3) attempt(n + 1);
+        else reject(new Timeout("Timed out"));
+      }, 250);
+    }
+    attempt(1);
+  });
+}
+
+
+function requestType(name, handler) {
+  defineRequestType(name, (nest, content, source,
+    callback) => {
+    try {
+      Promise.resolve(handler(nest, content, source))
+        .then(response => callback(null, response),
+          failure => callback(failure));
+    } catch (exception) {
+      callback(exception);
+    }
+  });
+}
+
+
+requestType("ping", () => "pong");
+
+function availableNeighbors(nest) {
+
+  let requests = nest.neighbors.map(neighbor => {
+    return request(nest, neighbor, "ping")
+      .then(() => true, () => false);
+  });
+
+  //    requests.map((x) => x.then((r)=> console.log(r)));
+
+  //let r = (Promise.all(requests));
+
+  //r.then((r) => console.log(r));
+
+  //console.log( nest.neighbors.filter((_) => true));
+
+                                    // true / false
+  var re =  Promise.all(requests).then(result => {
+    //console.log(nest.neighbors.filter((_, i) => result[i]));
+    return nest.neighbors.filter((_, i) => result[i]);
+  });
+
+  //console.log(re);
+
+  return re ;
+}
+
+let tt = availableNeighbors(bigOak);
+
+tt.then((r) => console.log(r));
+
+
