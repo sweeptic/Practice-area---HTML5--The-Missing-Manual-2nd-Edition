@@ -1,12 +1,78 @@
 
 
-let pr = Promise.resolve("pong");
-let pr2 =   pr.then(() => true);
 
-console.log(pr2);
 
-pr2.then((v) => console.log(v))
-pr2.then(() => console.log(pr))
+
+
+
+/*
+let start = Date.now();
+
+setTimeout(() => { console.log("Timeout ran at", Date.now() - start); }, 20);
+
+while (Date.now() < start + 5000) { }
+
+console.log("Wasted time until", Date.now() - start);
+
+*/
+
+// → Wasted time until 50
+// → Timeout ran at 55
+
+// → Wasted time until 50
+// → Timeout ran at 55
+
+
+/*
+function some_3secs_function(value, callback) {
+  console.log(3);
+  callback();
+}
+
+function some_5secs_function(value, callback) {
+  console.log(5);
+  callback();
+}
+
+function some_8secs_function(value, callback) {
+  console.log(8);
+  callback();
+}
+
+
+some_3secs_function(1, function () {
+  some_5secs_function(1, function () {
+    some_8secs_function(1, function () {
+      //All three functions have completed, in order.
+    });
+  });
+});
+
+
+async function f() {
+
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("done!"), 1000)
+  });
+
+  let result = await promise; // wait until the promise resolves (*)
+
+  alert(result); // "done!"
+}
+
+f();
+
+*/
+//setInterval(() => console.log('tick'), 200);
+
+
+let pr = Promise.resolve("pong").then(() => true);
+//let pr2 =   pr.then(() => true);
+
+console.log(pr);
+
+pr.then((v) => console.log(v))
+pr.then(() => console.log(pr))
 
 
 /*
