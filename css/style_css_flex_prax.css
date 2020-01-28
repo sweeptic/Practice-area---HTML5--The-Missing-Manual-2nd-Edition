@@ -84,6 +84,23 @@ body div {
     justify-content: space-around;
 }
 
+.cont7_1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.cont7_2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: stretch;
+}
+
+.cont7_2 div {
+    flex-grow: 1;
+    width: 100px;
+}
+
 /*----align items-------*/
 
 .cont8 {
@@ -202,6 +219,7 @@ body div {
     display: flex;
     flex-flow: row wrap;
 }
+
 /*child*/
 .cont20 .div1 {
     /*equal to flex:1*/
@@ -231,6 +249,7 @@ body div {
     display: flex;
     flex-flow: row nowrap;
 }
+
 /*child*/
 .cont21 .div1 {
     flex-grow: 0;
@@ -257,6 +276,7 @@ body div {
     display: flex;
     flex-flow: row nowrap;
 }
+
 /*child*/
 .cont22 .div1 {
     flex-grow: 1;
@@ -282,6 +302,7 @@ body div {
     display: flex;
     flex-flow: row nowrap;
 }
+
 /*child*/
 .cont23 .div1 {
     flex-grow: 1;
@@ -309,6 +330,7 @@ body div {
     display: flex;
     flex-flow: row wrap;
 }
+
 /*child*/
 .cont24 .div1 {
     flex-grow: 1;
@@ -335,6 +357,7 @@ body div {
     display: flex;
     flex-flow: row nowrap;
 }
+
 /*child*/
 .cont25 .div1 {
     font-weight: normal;
@@ -342,14 +365,64 @@ body div {
 
     width: 100px;
 
-   /* flex-grow: 2;
+    /* flex-grow: 2;
     flex-shrink: 1;
     flex-basis: 10%;*/
 }
 
 .cont25 .div2 {
-    
+
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0%;
+}
+
+
+/*************************/
+
+.upper {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 80px;
+    border: 1px red solid;
+
+    padding: 5px;
+    /* this */
+}
+
+.upper>div {
+    flex: 1 1 auto;
+    border: 1px red solid;
+    text-align: center;
+
+    margin: 5px;
+    /* and that, will result in a 10px gap */
+}
+
+
+.upper.mc
+
+/* multicol test */
+    {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 250px;
+    height: 200px;
+}
+
+
+.box {
+    display: flex;
+    justify-content: stretch;
+    /* width: 1000px; */
+    border: 1px solid red;
+
+}
+
+.item {
+    width: 100px;
+    border: 1px solid green;
+    flex-grow: 1;
 }
