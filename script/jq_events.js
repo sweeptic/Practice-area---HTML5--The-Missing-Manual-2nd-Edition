@@ -2,6 +2,16 @@
 
 $(document).ready(function () {
 
+    
+    $('lorem').toggle();
+    $('lorem').toggle();
+
+    /*$('.lorem').show(1000);
+    $('.lorem').hide(1000);
+    $('.lorem').show(1000);*/
+   /* $('.lorem').fadeIn(1000);
+    $('.lorem').fadeOut(1000);*/
+/*
     $('.answer').hide();
 
     $('.main h2').click(function () {
@@ -16,10 +26,9 @@ $(document).ready(function () {
             $answer.fadeOut();
             $(this).removeClass('close');
         }
-
     });
 
-
+*/
 
 
 
